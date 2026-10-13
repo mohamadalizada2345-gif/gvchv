@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MAZ Tools offers free online text tools and a password generator.">
+  <meta name="theme-color" content="#0b1020">
+  <title>MAZ Tools | Free Online Tools</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="#home">MAZ<span>Tools</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#tools">Tools</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-content">
+        <span class="eyebrow">SIMPLE • FREE • USEFUL</span>
+        <h1>Small tools.<br><span>Big productivity.</span></h1>
+        <p>Welcome to MAZ Tools — a collection of simple, useful tools to make your daily digital work easier.</p>
+        <a class="button primary" href="#tools">Explore Tools <span>→</span></a>
+        <div class="hero-note">
+          <span class="status-dot"></span>
+          Free tools, right in your browser
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="tools">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">YOUR ONLINE TOOLBOX</span>
+            <h2>Useful tools</h2>
+            <p>Choose a tool and get started instantly.</p>
+          </div>
+        </div>
+
+        <div class="tool-grid">
+          <a class="tool-card" href="#text-tool">
+            <span class="tool-icon purple">Aa</span>
+            <h3>Text Studio</h3>
+            <p>Count, clean, reverse, or change the case of your text.</p>
+            <span class="card-link">Open tool ↗</span>
+          </a>
+
+          <a class="tool-card" href="#password-tool">
+            <span class="tool-icon green">✳</span>
+            <h3>Password Generator</h3>
+            <p>Create a random password with your preferred length.</p>
+            <span class="card-link">Open tool ↗</span>
+          </a>
+
+          <a class="tool-card" href="#text-tool">
+            <span class="tool-icon blue">⇧</span>
+            <h3>Text Converter</h3>
+            <p>Convert text to uppercase, lowercase, or title case.</p>
+            <span class="card-link">Open tool ↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section editor-section" id="text-tool">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">TOOL 01</span>
+            <h2>Text Studio</h2>
+            <p>Write or paste text below to start editing.</p>
+          </div>
+        </div>
+
+        <div class="panel">
+          <label for="textInput">Your text</label>
+          <textarea id="textInput" rows="8" placeholder="Type or paste your text here..."></textarea>
+
+          <div class="text-stats">
+            <span>Characters: <strong id="charCount">0</strong></span>
+            <span>Words: <strong id="wordCount">0</strong></span>
+            <span>Lines: <strong id="lineCount">0</strong></span>
+          </div>
+
+          <div class="button-row">
+            <button class="button" id="upperBtn" type="button">UPPERCASE</button>
+            <button class="button" id="lowerBtn" type="button">lowercase</button>
+            <button class="button" id="titleBtn" type="button">Title Case</button>
+            <button class="button" id="cleanBtn" type="button">Clean Spaces</button>
+            <button class="button" id="reverseBtn" type="button">Reverse Text</button>
+          </div>
+
+          <div class="button-row secondary-row">
+            <button class="button primary" id="copyBtn" type="button">Copy Text</button>
+            <button class="button" id="downloadBtn" type="button">Download .txt</button>
+            <button class="button danger" id="clearBtn" type="button">Clear</button>
+          </div>
+          <p class="message" id="textMessage" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="password-tool">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">TOOL 02</span>
+            <h2>Password Generator</h2>
+            <p>Generate a random password in seconds.</p>
+          </div>
+        </div>
+
+        <div class="panel password-panel">
+          <label for="passwordLength">Password length: <strong id="lengthValue">16</strong></label>
+          <input id="passwordLength" type="range" min="8" max="40" value="16">
+
+          <div class="checkbox-grid">
+            <label><input id="includeUpper" type="checkbox" checked> Uppercase (A-Z)</label>
+            <label><input id="includeLower" type="checkbox" checked> Lowercase (a-z)</label>
+            <label><input id="includeNumbers" type="checkbox" checked> Numbers (0-9)</label>
+            <label><input id="includeSymbols" type="checkbox" checked> Symbols (!@#)</label>
+          </div>
+
+          <button class="button primary full-width" id="generateBtn" type="button">Generate Password</button>
+
+          <label for="passwordOutput">Your password</label>
+          <div class="password-output">
+            <input id="passwordOutput" type="text" readonly placeholder="Your password will appear here">
+            <button class="button" id="copyPasswordBtn" type="button">Copy</button>
+          </div>
+          <p class="message" id="passwordMessage" role="status" aria-live="polite"></p>
+          <p class="small-note">Use a unique password for each account. Store it safely and never share it with others.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="container about-card">
+        <div>
+          <span class="eyebrow">ABOUT MAZ TOOLS</span>
+          <h2>Made to make things easier.</h2>
+        </div>
+        <p>MAZ Tools is a simple online toolbox designed to help people complete everyday text tasks quickly. More useful tools can be added as the website grows.</p>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">LET'S CONNECT</span>
+            <h2>Contact Me</h2>
+            <p>Have a question or suggestion? Feel free to get in touch.</p>
+          </div>
+        </div>
+
+        <div class="contact-grid">
+          <a class="contact-card" href="tel:+923130030841">
+            <span class="contact-icon">☎</span>
+            <h3>Phone</h3>
+            <p>03130030841</p>
+            <span class="card-link">Call me ↗</span>
+          </a>
+
+          <a class="contact-card" href="https://wa.me/923130030841" target="_blank" rel="noopener noreferrer">
+            <span class="contact-icon">☏</span>
+            <h3>WhatsApp</h3>
+            <p>03130030841</p>
+            <span class="card-link">Chat on WhatsApp ↗</span>
+          </a>
+
+          <a class="contact-card" href="mailto:mohamadalizada2345@gmail.com">
+            <span class="contact-icon">✉</span>
+            <h3>Email</h3>
+            <p class="email-address">mohamadalizada2345@gmail.com</p>
+            <span class="card-link">Send an email ↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <a class="logo" href="#home">MAZ<span>Tools</span></a>
+      <p>Simple tools for everyday tasks.</p>
+      <p>© <span id="year"></span> MAZ Tools. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
